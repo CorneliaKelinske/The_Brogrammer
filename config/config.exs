@@ -44,6 +44,15 @@ config :logger, :console,
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
 
+# Config dart_sass which is used for Bulma
+config :dart_sass,
+  version: "1.36.0",
+  default: [
+    args: ~w(css:../priv/static/assets),
+    cd: Path.expand("../assets", __DIR__)
+  ]
+
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{config_env()}.exs"
