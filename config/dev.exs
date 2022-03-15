@@ -2,7 +2,6 @@ import Config
 
 # Configure your database
 
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -27,7 +26,6 @@ config :the_brogrammer, TheBrogrammerWeb.Endpoint,
       [:default, ~w(--embed-source-map --source-map-urls=absolute --watch)]
     }
   ]
-
 
 # ## SSL Support
 #
