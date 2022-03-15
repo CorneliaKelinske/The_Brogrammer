@@ -8,8 +8,6 @@ defmodule TheBrogrammer.Application do
   @impl true
   def start(_type, _args) do
     children = [
-      # Start the Ecto repository
-      TheBrogrammer.Repo,
       # Start the Telemetry supervisor
       TheBrogrammerWeb.Telemetry,
       # Start the PubSub system

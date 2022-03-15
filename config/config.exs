@@ -7,9 +7,6 @@
 # General application configuration
 import Config
 
-config :the_brogrammer,
-  ecto_repos: [TheBrogrammer.Repo]
-
 # Configures the endpoint
 config :the_brogrammer, TheBrogrammerWeb.Endpoint,
   url: [host: "localhost"],

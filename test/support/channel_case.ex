@@ -27,10 +27,4 @@ defmodule TheBrogrammerWeb.ChannelCase do
       @endpoint TheBrogrammerWeb.Endpoint
     end
   end
-
-  setup tags do
-    pid = Ecto.Adapters.SQL.Sandbox.start_owner!(TheBrogrammer.Repo, shared: not tags[:async])
-    on_exit(fn -> Ecto.Adapters.SQL.Sandbox.stop_owner(pid) end)
-    :ok
-  end
 end
