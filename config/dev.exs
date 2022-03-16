@@ -2,7 +2,6 @@ import Config
 
 # Configure your database
 
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -20,9 +19,13 @@ config :the_brogrammer, TheBrogrammerWeb.Endpoint,
   secret_key_base: "Yx6om7bNOqjK8DeExG3EecegwnC5a6w1HTOW9GjdstE+75CyxYKS0yHSyVckLk9I",
   watchers: [
     # Start the esbuild watcher by calling Esbuild.install_and_run(:default, args)
-    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]}
+    esbuild: {Esbuild, :install_and_run, [:default, ~w(--sourcemap=inline --watch)]},
+    sass: {
+      DartSass,
+      :install_and_run,
+      [:default, ~w(--embed-source-map --source-map-urls=absolute --watch)]
+    }
   ]
-
 
 # ## SSL Support
 #

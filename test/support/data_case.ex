@@ -18,7 +18,6 @@ defmodule TheBrogrammer.DataCase do
 
   using do
     quote do
-
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
