@@ -1,0 +1,11 @@
+{application,postex,
+             [{applications,[kernel,stdlib,elixir,logger,phoenix_html,
+                             makeup_elixir,earmark,earmark_parser]},
+              {description,"a simple static blog generator using markdown files"},
+              {modules,['Elixir.Phoenix.HTML.Safe.Postex.Post',
+                        'Elixir.Postex','Elixir.Postex.Highlighter',
+                        'Elixir.Postex.MetaData','Elixir.Postex.Post',
+                        'Elixir.Postex.Validate',
+                        'Elixir.String.Chars.Postex.Post']},
+              {registered,[]},
+              {vsn,"0.1.7"}]}.

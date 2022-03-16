@@ -21,6 +21,11 @@ defmodule TheBrogrammerWeb.Router do
     get "/", PageController, :index
     get "/home", PageController, :index
 
+    get "/blog", PostController, :index
+    get "/blog/:page", PostController, :index
+    resources "/post", PostController, only: [:show]
+    resources "/tag", TagController, only: [:index, :show]
+
   end
 
   # Other scopes may use custom stacks.
