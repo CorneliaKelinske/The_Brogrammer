@@ -1,0 +1,8 @@
+<footer class="footer">
+     <div class="content is-small has-text">
+    <p>
+      Feel free to <strong><a> <%= link "get in touch", to: "/contact", class: "special-link" %></a></strong> if you like my page or have any questions or suggestions.
+    </p>
+  </div>
+
+</footer>
