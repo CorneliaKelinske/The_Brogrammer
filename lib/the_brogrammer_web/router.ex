@@ -17,7 +17,10 @@ defmodule TheBrogrammerWeb.Router do
   scope "/", TheBrogrammerWeb do
     pipe_through :browser
 
+    get "/about", PageController, :about_me
     get "/", PageController, :index
+    get "/home", PageController, :index
+
   end
 
   # Other scopes may use custom stacks.
