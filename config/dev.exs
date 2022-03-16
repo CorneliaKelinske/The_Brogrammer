@@ -71,3 +71,10 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
+
+# For production it's recommended to configure a different adapter
+# at the `config/runtime.exs`.
+config :the_brogrammer, TheBrogrammer.Mailer, adapter: Swoosh.Adapters.Local
+
+# Swoosh API client is needed for adapters other than SMTP.
+config :swoosh, :api_client, false
