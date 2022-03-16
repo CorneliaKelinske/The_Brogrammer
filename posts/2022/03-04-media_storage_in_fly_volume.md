@@ -17,14 +17,14 @@ coding
 # 1. The problem
 
 
-In the last [post](https://connie.codes/post/media_upload_to_database), I described how I stored image and video uploads for 
+In the last [post](/post/media_upload_to_database), I described how I stored image and video uploads for 
 a small-scale phoenix app as binary directly in the database. I have since deployed said app on [fly.io](https://fly.io/) and quickly realized that while my storage solution worked well for images, video files were a different story. I was able to upload and display videos without issue when I was using the app in production on my computer, but on mobile devices, videos would either not load properly and be jumpy or the wheel of death would appear and spin indefinitely. I had also added some more complexity to my code by compressing uploads prior to their storage and that, in combination with the storage as binary, was more than the server was able to handle. 
 
 
 # 2. The solution
 
 
-After the initial impulse to delete the app and throw my computer out of the window ([The Dark Side of becoming a web developer](https://connie.codes/post/the_dark_side)), my first thought was to use Amazon S3 storage. But in a lucky turn of events I discovered that fly.io actually offers a persistent storage option in the form of data volumes that can be easily connected to your app (https://fly.io/blog/persistent-storage-and-fast-remote-builds/). The initial set-up takes less than 5 minutes. You just have to follow the instructions [here](https://fly.io/docs/reference/volumes/). Everything worked. I logged into the remote console and created a file in my volume, which was still available after I had redeployed my app.
+After the initial impulse to delete the app and throw my computer out of the window ([The Dark Side of becoming a web developer](/post/the_dark_side)), my first thought was to use Amazon S3 storage. But in a lucky turn of events I discovered that fly.io actually offers a persistent storage option in the form of data volumes that can be easily connected to your app (https://fly.io/blog/persistent-storage-and-fast-remote-builds/). The initial set-up takes less than 5 minutes. You just have to follow the instructions [here](https://fly.io/docs/reference/volumes/). Everything worked. I logged into the remote console and created a file in my volume, which was still available after I had redeployed my app.
 
 
 # 3. Where things got tricky 

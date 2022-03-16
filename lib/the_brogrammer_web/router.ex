@@ -25,6 +25,8 @@ defmodule TheBrogrammerWeb.Router do
     get "/blog/:page", PostController, :index
     resources "/post", PostController, only: [:show]
     resources "/tag", TagController, only: [:index, :show]
+    get "/contact", ContactController, :new
+    post "/contact", ContactController, :create
 
   end
 

@@ -13,9 +13,10 @@ defmodule TheBrogrammer.Application do
       # Start the PubSub system
       {Phoenix.PubSub, name: TheBrogrammer.PubSub},
       # Start the Endpoint (http/https)
-      TheBrogrammerWeb.Endpoint
+      TheBrogrammerWeb.Endpoint,
       # Start a worker by calling: TheBrogrammer.Worker.start_link(arg)
       # {TheBrogrammer.Worker, arg}
+      {TheBrogrammer.Email.SecretAnswer, %{}}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

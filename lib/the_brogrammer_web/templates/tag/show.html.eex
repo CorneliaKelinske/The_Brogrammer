@@ -1,0 +1,17 @@
+<h1 class=title><%= @page_title %></h1>
+
+<ul class="ul">
+  <%= for post <- @posts do %>
+    <li>
+        <p>●  <%= link post.title, to: Routes.post_path(@conn, :show, post), class: "list-link"%></p>
+
+    </li>
+
+  <% end %>
+</ul>
+
+
+
+ <div>
+    <%= link "Back to Blog", to: Routes.post_path(@conn, :index), class: "special-link" %>
+  </div>
