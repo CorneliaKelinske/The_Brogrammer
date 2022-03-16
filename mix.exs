@@ -52,7 +52,9 @@ defmodule TheBrogrammer.MixProject do
       {:dart_sass, "~> 0.1", runtime: Mix.env() == :dev},
       {:bulma, "0.9.3"},
       {:hackney, "~> 1.17"},
-      {:postex, "~> 0.1.6"}
+      {:postex, "~> 0.1.6"},
+      {:rustler, "~> 0.22.2"},
+      {:uuid, "~> 1.1"}
     ]
   end
 
