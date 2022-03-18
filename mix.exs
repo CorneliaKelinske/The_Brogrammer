@@ -7,6 +7,14 @@ defmodule TheBrogrammer.MixProject do
       version: "0.1.0",
       elixir: "~> 1.12",
       elixirc_paths: elixirc_paths(Mix.env()),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test,
+        "coveralls.lcov": :test
+      ],
       compilers: [:gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
@@ -54,7 +62,12 @@ defmodule TheBrogrammer.MixProject do
       {:hackney, "~> 1.17"},
       {:postex, "~> 0.1.6"},
       {:rustler, "~> 0.22.2"},
-      {:uuid, "~> 1.1"}
+      {:uuid, "~> 1.1"},
+      {:excoveralls, "~> 0.10", only: :test},
+      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+      {:ex_check, "~> 0.14.0", only: [:dev], runtime: false},
+      {:doctor, "~> 0.18.0", only: :dev}
     ]
   end
 

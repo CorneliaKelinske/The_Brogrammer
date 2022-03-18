@@ -14,7 +14,6 @@ config :the_brogrammer, TheBrogrammerWeb.Endpoint,
   pubsub_server: TheBrogrammer.PubSub,
   live_view: [signing_salt: "w0lBZq9C"]
 
-
 # Configure esbuild (the version is required)
 config :esbuild,
   version: "0.14.0",
@@ -40,7 +39,6 @@ config :dart_sass,
     args: ~w(--load-path=../deps/bulma css:../priv/static/assets),
     cd: Path.expand("../assets", __DIR__)
   ]
-
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

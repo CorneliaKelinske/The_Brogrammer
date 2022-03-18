@@ -27,7 +27,6 @@ defmodule TheBrogrammerWeb.Router do
     resources "/tag", TagController, only: [:index, :show]
     get "/contact", ContactController, :new
     post "/contact", ContactController, :create
-
   end
 
   # Other scopes may use custom stacks.
