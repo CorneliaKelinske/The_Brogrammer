@@ -1,6 +1,6 @@
 defmodule TheBrogrammer.MailerTest do
   use TheBrogrammer.DataCase
-  alias TheBrogrammer.{Mailer, EmailBuilder}
+  alias TheBrogrammer.{EmailBuilder, Mailer}
   import Swoosh.TestAssertions
 
   @valid_params %{

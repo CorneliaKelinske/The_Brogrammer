@@ -1,9 +1,6 @@
 defmodule TheBrogrammerWeb.ContactController do
   use TheBrogrammerWeb, :controller
-  alias TheBrogrammer.Email.Contact
-  alias TheBrogrammer.Mailer
-  alias TheBrogrammer.EmailBuilder
-  alias TheBrogrammer.Email.SecretAnswer
+  alias TheBrogrammer.{Email.Contact, Email.SecretAnswer, EmailBuilder, Mailer}
 
   @spec new(Plug.Conn.t(), map) :: Plug.Conn.t()
   def new(conn, _params) do

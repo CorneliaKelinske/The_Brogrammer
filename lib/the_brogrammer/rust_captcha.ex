@@ -6,5 +6,5 @@ defmodule RustCaptcha do
   use Rustler, otp_app: :the_brogrammer, crate: "rustcaptcha"
 
   # When your NIF is loaded, it will override this function.
-  def generate(), do: :erlang.nif_error(:nif_not_loaded)
+  def generate, do: :erlang.nif_error(:nif_not_loaded)
 end
