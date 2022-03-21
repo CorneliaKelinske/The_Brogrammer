@@ -4,8 +4,10 @@ defmodule TheBrogrammerWeb.ContactController do
 
   @spec new(Plug.Conn.t(), map) :: Plug.Conn.t()
   def new(conn, _params) do
-    with {captcha_text, captcha_image} <- RustCaptcha.generate() do
-      id = SecretAnswer.check_in(captcha_text)
+    # this line will be ExRoboCop.create_captcha
+    with {captcha_text, captcha_image} <- ExRoboCop.create_captcha() do
+    #this line will be ExRoboCop.get_captcha_id
+      id = ExRoboCop.get_captcha_id(captcha_text)
 
       render(conn, "new.html",
         page_title: "Contact",

@@ -67,7 +67,8 @@ defmodule TheBrogrammer.MixProject do
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:ex_check, "~> 0.14.0", only: [:dev], runtime: false},
-      {:doctor, "~> 0.18.0", only: :dev}
+      {:doctor, "~> 0.18.0", only: :dev},
+      {:ex_robo_cop, path: "/home/connie/devdev/ex_robo_cop"}
     ]
   end
 

@@ -16,7 +16,7 @@ defmodule TheBrogrammer.Application do
       TheBrogrammerWeb.Endpoint,
       # Start a worker by calling: TheBrogrammer.Worker.start_link(arg)
       # {TheBrogrammer.Worker, arg}
-      {TheBrogrammer.Email.SecretAnswer, %{}}
+      ExRoboCop.start()
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
