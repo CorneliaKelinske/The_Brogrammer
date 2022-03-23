@@ -5,7 +5,7 @@ defmodule TheBrogrammerWeb.ContactController do
   @spec new(Plug.Conn.t(), map) :: Plug.Conn.t()
   def new(conn, _params) do
     with {captcha_text, captcha_image} <- ExRoboCop.create_captcha() do
-      form_id = ExRoboCop.create_form_ID(captcha_text)
+      form_id = ExRoboCop.create_form_id(captcha_text)
 
       render(conn, "new.html",
         page_title: "Contact",
@@ -56,7 +56,7 @@ defmodule TheBrogrammerWeb.ContactController do
 
   defp render_page(conn, changeset, message_type, message) do
     with {captcha_text, captcha_image} <- ExRoboCop.create_captcha() do
-      id = ExRoboCop.create_form_ID(captcha_text)
+      id = ExRoboCop.create_form_id(captcha_text)
 
       conn
       |> put_flash(message_type, message)
