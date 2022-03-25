@@ -8,7 +8,6 @@ defmodule TheBrogrammer.Email.Content do
             answer: nil,
             not_a_robot: nil
 
-
   @type t :: %__MODULE__{
           from_email: String.t(),
           to_email: String.t(),
@@ -28,7 +27,7 @@ defmodule TheBrogrammer.Email.Content do
           answer: :string,
           not_a_robot: :string
         }
-        
+
   def types do
     %{
       from_email: :string,
