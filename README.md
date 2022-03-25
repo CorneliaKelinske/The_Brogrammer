@@ -1,7 +1,8 @@
 # TheBrogrammer
 
-[![Build Status](https://github.com/corneliakelinske/the_brogrammer/workflows/Coveralls/badge.svg)](https://github.com/corneliakelinske/the_little_thinkers_space) 
-[![Build Status](https://github.com/corneliakelinske/the_brogrammer/workflows/Credo/badge.svg)](https://github.com/corneliakelinske/the_little_thinkers_space) 
+[![Build Status](https://github.com/corneliakelinske/the_brogrammer/workflows/Coveralls/badge.svg)](https://github.com/corneliakelinske/the_brogrammer) 
+[![Build Status](https://github.com/corneliakelinske/the_brogrammer/workflows/Credo/badge.svg)](https://github.com/corneliakelinske/the_brogrammer) 
+[![codecov](https://codecov.io/gh/corneliakelinske/the_brogrammer/branch/main/graph/badge.svg?token=P3O42SF7VJ)](https://codecov.io/gh/corneliakelinske/the_brogrammer)
 
 To start your Phoenix server:
 
