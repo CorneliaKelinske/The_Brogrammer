@@ -61,13 +61,12 @@ defmodule TheBrogrammer.MixProject do
       {:bulma, "0.9.3"},
       {:hackney, "~> 1.17"},
       {:postex, "~> 0.1.6"},
-      {:rustler, "~> 0.22.2"},
-      {:uuid, "~> 1.1"},
       {:excoveralls, "~> 0.10", only: :test},
       {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
       {:ex_check, "~> 0.14.0", only: [:dev], runtime: false},
-      {:doctor, "~> 0.18.0", only: :dev}
+      {:doctor, "~> 0.18.0", only: :dev},
+      {:ex_robo_cop, "~> 0.1.0"}
     ]
   end
 
