@@ -17,7 +17,7 @@ defmodule TheBrogrammerWeb.ContactController do
   end
 
   @spec create(Plug.Conn.t(), map) :: Plug.Conn.t()
-  def create(conn, %{"content" => %{"not_a_robot" => text, "form_id" => form_id} = message_params}) do 
+  def create(conn, %{"content" => %{"not_a_robot" => text, "form_id" => form_id} = message_params}) do
     changeset = Contact.changeset(message_params)
 
     with :ok <- ExRoboCop.not_a_robot?({text, form_id}),

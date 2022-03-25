@@ -6,8 +6,8 @@ defmodule TheBrogrammer.Email.Content do
             subject: nil,
             message: nil,
             answer: nil,
-            not_a_robot: nil,
-            image: nil
+            not_a_robot: nil
+
 
   @type t :: %__MODULE__{
           from_email: String.t(),
@@ -16,8 +16,7 @@ defmodule TheBrogrammer.Email.Content do
           subject: String.t(),
           message: String.t(),
           answer: String.t(),
-          not_a_robot: String.t(),
-          image: :binary
+          not_a_robot: String.t()
         }
 
   @spec types :: %{
@@ -27,9 +26,9 @@ defmodule TheBrogrammer.Email.Content do
           to_email: :string,
           subject: :string,
           answer: :string,
-          not_a_robot: :string,
-          image: :binary
+          not_a_robot: :string
         }
+        
   def types do
     %{
       from_email: :string,
@@ -38,8 +37,7 @@ defmodule TheBrogrammer.Email.Content do
       subject: :string,
       message: :string,
       answer: :string,
-      not_a_robot: :string,
-      image: :binary
+      not_a_robot: :string
     }
   end
 end
