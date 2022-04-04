@@ -13,7 +13,18 @@ defmodule TheBrogrammer.MixProject do
         "coveralls.detail": :test,
         "coveralls.post": :test,
         "coveralls.html": :test,
-        "coveralls.lcov": :test
+        "coveralls.lcov": :test,
+        dialyzer: :test,
+        doctor: :test,
+        credo: :test,
+        check: :test
+      ],
+      dialyzer: [
+        plt_add_apps: [:ex_unit, :mix],
+        list_unused_filters: true,
+        plt_local_path: "dialyzer",
+        plt_core_path: "dialyzer",
+        flags: [:unmatched_returns, :no_improper_lists]
       ],
       compilers: [:gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -61,12 +72,13 @@ defmodule TheBrogrammer.MixProject do
       {:bulma, "0.9.3"},
       {:hackney, "~> 1.17"},
       {:postex, "~> 0.1.6"},
+      {:ex_robo_cop, "~> 0.1.0"},
+      # Tooling
       {:excoveralls, "~> 0.10", only: :test},
-      {:credo, "~> 1.5", only: [:dev, :test], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
-      {:ex_check, "~> 0.14.0", only: [:dev], runtime: false},
-      {:doctor, "~> 0.18.0", only: :dev},
-      {:ex_robo_cop, "~> 0.1.0"}
+      {:credo, "~> 1.5", only: :test, runtime: false},
+      {:dialyxir, "~> 1.0", only: :test, runtime: false},
+      {:ex_check, "~> 0.14.0", only: :test, runtime: false},
+      {:doctor, "~> 0.18.0", only: :test}
     ]
   end
 
