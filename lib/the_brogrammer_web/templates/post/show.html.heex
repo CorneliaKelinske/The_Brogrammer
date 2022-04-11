@@ -1,24 +1,18 @@
 <section class="hero">
-<div class="hero-body">
+  <div class="hero-body">
+    <article class="message">
+      <div class="message-header">
+        <%= @post.title %>
+      </div>
 
-<article class="message">
-<div class="message-header">
+      <div class="block">
+        <div class="blog-date"><%= @post.date %></div>
+        <div class="blog-author">Written by <%= @post.author %></div>
+      </div>
 
-<%= @post.title %>
-</div>
-
-
-<div class="block">
-    <div class="blog-date"><%= @post.date %></div>
-    <div class="blog-author">Written by <%= @post.author %></div>
-</div>
-
-
-<div class="message-body">
-  <%= raw @post.body %>
-</div>
-
-
-</article>
-</div>
+      <div class="message-body">
+        <%= raw(@post.body) %>
+      </div>
+    </article>
+  </div>
 </section>

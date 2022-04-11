@@ -1,52 +1,51 @@
 <h1 class="title">Contact me</h1>
 
 <%= form_for @changeset, Routes.contact_path(@conn, :create), [class: "box"], fn f -> %>
-<div class="field">
-  <%= label f, :name, class: "label"%>
+  <div class="field">
+    <%= label(f, :name, class: "label") %>
+    <div class="control">
+      <%= text_input(f, :name, class: "input", type: "text", placeholder: "Your name") %>
+    </div>
+  </div>
+  <%= error_tag(f, :name) %>
+
+  <div class="field">
+    <%= label(f, :Email, class: "label") %>
+    <div class="control has-icons-left has-icons-right">
+      <%= email_input(f, :from_email, class: "input", type: "email", placeholder: "Your email") %>
+      <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span>
+    </div>
+  </div>
+  <%= error_tag(f, :from_email) %>
+
+  <div class="field">
+    <%= label(f, :Subject, class: "label") %>
+    <div class="control">
+      <%= text_input(f, :subject, class: "input", placeholder: "What is the subject of your message?") %>
+    </div>
+  </div>
+  <%= error_tag(f, :subject) %>
+  <div class="field">
+    <%= label(f, :Message, class: "label") %>
+    <div class="control">
+      <%= textarea(f, :message, class: "textarea", placeholder: "Your message") %>
+    </div>
+  </div>
+  <%= error_tag(f, :message) %>
+
+  <div class="field">
+    <%= label(f, :not_a_robot, class: "label") %>
+    <div class="control">
+      <%= text_input(f, :not_a_robot, class: "input", type: "text", placeholder: "Please enter the letters shown below") %>
+    </div>
+  </div>
+
+  <%= text_input(f, :form_id, type: "text", hidden: true, value: @form_id) %>
+  <%= display_captcha(@captcha_image) %>
+
   <div class="control">
-    <%= text_input f, :name, class: "input", type: "text", placeholder: "Your name" %>
+    <%= submit("Submit", class: "button is-dark") %>
   </div>
-</div>
-<%= error_tag f, :name%>
-
-<div class="field">
-  <%= label f, :Email, class: "label" %>
-  <div class="control has-icons-left has-icons-right">
-    <%= email_input f, :from_email, class: "input", type: "email", placeholder: "Your email" %>
-    <span class="icon is-small is-left">
-      <i class="fas fa-envelope"></i>
-    </span>
-  </div>
-</div>
-<%= error_tag f, :from_email%>
-
-<div class="field">
-
-  <%= label f, :Subject, class: "label" %>
-  <div class="control">
-    <%= text_input f, :subject, class: "input", placeholder: "What is the subject of your message?" %>
-  </div>
-</div>
-<%= error_tag f, :subject%>
-<div class="field">
-  <%= label f, :Message, class: "label" %>
-  <div class="control">
-    <%= textarea f, :message, class: "textarea", placeholder: "Your message" %>
-  </div>
-</div>
-<%= error_tag f, :message%>
-
-<div class="field">
-  <%= label f, :not_a_robot, class: "label"%>
-  <div class="control">
-    <%= text_input f, :not_a_robot, class: "input", type: "text", placeholder: "Please enter the letters shown below" %>
-  </div>
-</div>
-
-<%= text_input f, :form_id, type: "text", hidden: true, value: @form_id %>
-<%= display_captcha(@captcha_image) %>
-
-<div class="control">
-  <%= submit "Submit", class: "button is-dark" %>
-</div>
 <% end %>
