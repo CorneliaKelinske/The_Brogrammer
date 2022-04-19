@@ -1,5 +1,5 @@
 defmodule TheBrogrammerWeb.PageControllerTest do
-  use TheBrogrammerWeb.ConnCase
+  use TheBrogrammerWeb.ConnCase, async: true
 
   test "index", %{conn: conn} do
     conn = get(conn, "/")
