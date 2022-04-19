@@ -1,5 +1,5 @@
 defmodule TheBrogrammer.MailerTest do
-  use TheBrogrammer.DataCase
+  use TheBrogrammer.DataCase, async: true
   alias TheBrogrammer.{EmailBuilder, Mailer}
   import Swoosh.TestAssertions
 

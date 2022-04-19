@@ -1,6 +1,5 @@
 defmodule TheBrogrammerWeb.ContactControllerTest do
-  use TheBrogrammerWeb.ConnCase
-  alias TheBrogrammer.Email.SecretAnswer
+  use TheBrogrammerWeb.ConnCase, async: true
 
   @valid_params %{
     from_email: "tester@test.com",
