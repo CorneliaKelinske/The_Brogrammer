@@ -10,7 +10,7 @@ storing the multimedia files uploaded via the app. Read on to find out what I le
 
 
 ==tags==
-coding
+coding, elixir, phoenix, fly.io
 
 ==body==
 
