@@ -9,7 +9,7 @@ When I decided to store multimedia uploads for a small personal Phoenix project 
 
 
 ==tags==
-coding
+coding, elixir, phoenix
 
 ==body==
 
