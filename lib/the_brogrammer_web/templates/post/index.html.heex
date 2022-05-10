@@ -8,10 +8,11 @@
         <div class="message-header">
           <p><%= link(post.title, to: Routes.post_path(@conn, :show, post), class: "blog-link") %></p>
         </div>
-        <div class="blog-date">
-          <p><%= post.date %></p>
-        </div>
+
         <div class="message-body">
+          <div class="blog-date">
+            <%= post.date %>
+          </div>
           <p><%= post.description %> &nbsp; <%= link("more", to: Routes.post_path(@conn, :show, post.id)) %> <br /></p>
           <p>
             <%= for tag <- post.tags do %>

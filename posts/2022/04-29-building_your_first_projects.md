@@ -5,13 +5,18 @@ Building your first projects
 Cornelia Kelinske
 
 ==description==
-There comes a time in the life of every aspiring developer when they have to leave the safety and comfort of books, online tutorials and bootcamps in order to build something of their own. Here are some tips.
+
+... don't get stuck in tutorial hell. Here are some tips for how to get started on writing your own code.
 
 
 ==tags==
 coding
 
 ==body==
+
+# Start early and start small
+
+The sooner you get into the habit of applying what you learn in your books, online tutorials and bootcamps for  
 
 # Let's do it!
 
