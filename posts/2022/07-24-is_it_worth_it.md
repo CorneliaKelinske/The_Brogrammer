@@ -28,9 +28,9 @@ But now, without further ado, here is what I have learned:
 
 Especially The Little Thinker's Space was a great opportunity to work with various libraries and to 
 practice everything that comes along with it:
-- reading (and understanding) documentation
-- reading typespecs
-- installing and using different libraries with the help of the documentation and typespecs. 
+- -- reading (and understanding) documentation
+- -- reading typespecs
+- -- installing and using different libraries with the help of the documentation and typespecs. 
 As a result, I also discovered:
 
 
@@ -70,20 +70,38 @@ I will then move on to:
 In the course of working on my projects, I have made it a habit to write tickets for myself. Once I have done all the steps described in point 4. above, I will pick the first piece of my project that I want to write and I break it down into smaller steps and I write myself tickets for each step (I am using [Shortcut](https://shortcut.com), a project management app for this, but even just a simple to-do list would probably do).
 
 For example, let's assume I want to have a database table for users. Each user has a a name and an email. I will write myself a ticket that will look a bit like this:
-- checkout branch
-- create migration
-- add unique index to email
-- create Ecto.Schema
-- add validations
-- run mix check
-- commit 
-- merge
-- pull
+- -- checkout branch
+- -- create migration
+- -- add unique index to email
+- -- create Ecto.Schema
+- -- add validations
+- -- run mix check
+- -- commit 
+- -- merge
+- -- pull
 
+Thanks to this strategy, I already have a plan in place by the time I start writing the actual code and I'm not going in blindly.
+And, what's even more valuable to me: by making my first step something as simple and easy as checking out my branch, I can trick myself into getting started on the task and/or project without procrastinating. 
 
+Prior to adopting this approach of planning big steps and breaking them down into smaller ones, I sometimes froze a little, when the task at hand appeared to be huge and my coding ability small.
 
 
 # 6. Dealing with setbacks
+
+
+As described in points 5. and 6., I have process and I have a plan. But this does not mean that everything will go according to said plan. In fact, more times than not, the initial plan will have to be adjusted, slightly tweaked or, in some cases, even be thrown overboard.
+And that's okay. I think handling setbacks is an important part of being a developer.
+
+Here are some of the setbacks I have encountered in the course of my personal projects and ways to handle them:
+
+- -- failing tests: read the error message! Make sure you remembered to re-assign the variables (because immutability).
+- -- something works locally but crashes the production server: find a way to reduce the data load (caches, file compression etc.)
+- -- you want to do something, but can't find a good library: build your own library 
+- -- you find yourself at a dead end: take a break, go for a thinking walk (or whatever works for you) and start again fresh
+- -- something seems to be way beyond your ability: don't hesitate to ask somebody more experienced for help
+
+
+In short, don't give up! It's okay to pivot and to find workarounds. Find something that works. It can always be refactored and made prettier later.
 
 
 # 7. Refactoring
