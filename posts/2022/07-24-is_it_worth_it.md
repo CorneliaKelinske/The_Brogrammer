@@ -16,9 +16,9 @@ coding, personal
 ==body==
 
 
-The valuable insights that I am sharing in this post are based on my work on these projects:
+What I am sharing in this post is based on my work on these projects:
   - -- this website 
-  - -- The Little Thinker's Space (a photo/video sharing app I built for my son; (https://the-little-thinkers-space.fly.dev/)) 
+  - -- The Little Thinker's Space (a photo/video sharing app I built for my son; (https://the-little-thinkers-space.fly.dev/) 
   - -- ex_robo_cop (a light-weight captcha library; https://hexdocs.pm/ex_robo_cop/README.html)
 
 But now, without further ado, here is what I have learned:
@@ -57,7 +57,7 @@ but, spending a bit more time getting into Tailwind initially is worth it, as cu
 
 Creating your project means you first have to know what it is you want to create. It also means you are the one who has to think about how to get to the final product.
 
-I like using a mixture of mind mapping and random note-taking when I am sorting through my ideas for a project. Once I have a rough idea of what I want my application to look like, I start thinking about the components I will need (database, controllers, templates) and the specific functionality I would like to provide in my app (e.g. video uploads).
+I like using a mixture of mind mapping and random note-taking when I am sorting through my ideas for a project. Once I have a rough idea of what I want my application to look like, I start thinking about the components I will need (database migrations, schemas, controllers, templates) and the specific functionality I would like to provide in my app (e.g. video uploads).
 
 As the last step, I will also outline a rough road map and figure out where I will start building.
 
@@ -75,10 +75,11 @@ For example, let's assume I want to have a database table for users. Each user h
 - -- add unique index to email
 - -- create Ecto.Schema
 - -- add validations
-- -- run mix check
+- -- run the test suite
 - -- commit 
-- -- merge
-- -- pull
+- -- open a pull request
+- -- merge the pull request
+- -- pull the changes into main
 
 Thanks to this strategy, I already have a plan in place by the time I start writing the actual code and I'm not going in blindly.
 And, what's even more valuable to me: by making my first step something as simple and easy as checking out my branch, I can trick myself into getting started on the task and/or project without procrastinating. 
@@ -140,18 +141,18 @@ I am, for instance, using my own [ex_robo_cop](https://hexdocs.pm/ex_robo_cop/RE
 While I am certainly no Docker expert, I picked up a few things along the way and Docker does no longer appear to be all Black Magic.
 
 
-# 10. Version upgrade
+# 10. Updating dependencies
 
 
 While I was in the middle of my work on The Little Thinker's Space, Phoenix 1.6 was released. Initially, I tried to ignore this fact and doggedly stuck with my Phoenix 1.5 app. It was only when I had difficulties getting Tailwind running properly that I decided to upgrade after all. 
 
-There were some hick-ups along the way, especially due to the switch to .heex templates (https://connie.codes/post/media_upload_to_database), but in the end, it was very manageable and added to my experience.
+There were some hiccups along the way, especially due to the switch to .heex templates (https://connie.codes/post/media_upload_to_database), but in the end, it was very manageable and added to my experience.
 
 
 # Bonus tip: Others might not share the excitement - and that's okay
 
 
-The perhaps hardest lesson I had to learn was not to seek (too much) validation from friends and family. The truth is: most people have no idea how much work goes into building an application. They might see your masterpiece and tell you that they, too, have built a website once (... with Wordpress). If they look at your site that is. 
+The perhaps hardest lesson I had to learn was not to seek (too much) validation from friends and family. The truth is: most people have no idea how much work goes into building an application. They might see your masterpiece and tell you that they, too, have built a website once (... with Wordpress). If they EVEN look at your site that is. 
 
 I remember how proud I was when I finally deployed a working version of The Little Thinker's Space. I sent out login information to my friends and couldn't wait for them to see what I had built. Only ONE of them logged on. I wish I could say that it didn't bother me and that I did not feel bitter ... 
 
