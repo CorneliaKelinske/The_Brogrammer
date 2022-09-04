@@ -126,7 +126,7 @@ We can then add the `match_handlers` to our list of children in the `start/2` fu
 Second stop: the actual GenServer module, `match_handler.ex`:
 
 ```
-defmodule ForzaFootball.MatchHandler do
+defmodule MyApp.MatchHandler do
   
   use GenServer
   
