@@ -62,7 +62,7 @@ But enough with the talk. Let's look at some code!
 
 **General organization**
 
-```
+```bash
 
 lib
 │   ├── my_app
