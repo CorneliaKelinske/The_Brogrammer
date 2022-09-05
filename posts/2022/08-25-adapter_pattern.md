@@ -97,7 +97,7 @@ defmodule MyApp.Application do
 
   @impl true
   def start(_type, _args) do
-    children = [MyApp.Repo] ++ match_handlers()
+    children = [MyApp.Repo | match_handlers()]
 
     
     opts = [strategy: :one_for_one, name: MyApp.Supervisor]
