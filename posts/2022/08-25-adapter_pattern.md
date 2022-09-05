@@ -1,5 +1,5 @@
 ==title==
-Same, same, but different - using Behaviour for writing reusable and adaptable code 
+Same same, but different - using Behaviours to write extensible code
 
 ==author==
 Cornelia Kelinske
