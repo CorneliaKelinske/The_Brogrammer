@@ -91,7 +91,7 @@ The `match_handler.ex` file is the GenServer module, `match.ex` and `matches.ex`
 First stop: `application.ex`, where the GenServer is added to the Supervision tree:
 
 ```
-defmodule MyApplication.Application do
+defmodule MyApp.Application do
   
   use Application
 
