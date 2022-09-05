@@ -16,7 +16,7 @@ coding, elixir, otp, Behaviour
 # 1. The task at hand
 
 
-We need to write some code that allows us to periodically query a number of different APIs to obtain event data and persist it in a database. I live in Canada, so let's say the events are hockey games (DISCLAIMER: I know nothing about hockey!). We want to get information on the home team, the away team and the start time. To keep things simple, we will only query 2 APIs for this example. They both return the information we want; however, API A is returning it in this format:
+We need to write some code that allows us to periodically query several different APIs to obtain event data and then persist the responses in a database. I live in Canada, so let's say the events are hockey games (DISCLAIMER: I know nothing about hockey!). We want to get information on the home team, the away team, and the start time. To keep things simple, we will only query 2 APIs for this example. They both return the information we want; however, API A is returning it in this format:
 
 ```
 [ { "home_team": "Edmonton Oilers", "away_team": "Vancouver Canucks", "start_at": "2022-11-19T09:00:00Z", "created_at": "2018-12-19T09:00:00Z"} ]
