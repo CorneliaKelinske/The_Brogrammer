@@ -148,14 +148,11 @@ defmodule MyApp.MatchHandler do
   end
 
   @impl GenServer
-  def handle_info(
-        :match_query,
-        %{api_module: api_module} = state
-      ) do
+  def handle_info(:match_query, %{api_module: api_module} = state) do 
     Process.send_after(self(), :match_query, 30_000)
 
     case api_module.fetch_and_standardize_match_data(state) do
-      [...] #This is where the database interactions as well as any error logging happens. In all cases, we return:
+      [...] # This is where the database interactions as well as any error logging happens. In all cases, we return:
 
      {:noreply, state}
     end
