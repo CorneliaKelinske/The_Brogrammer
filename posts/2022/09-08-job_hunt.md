@@ -21,9 +21,13 @@ I am a translator turned web developer, i.e. I have a non-tech background. Elixi
 
 As I am writing this post, I have successfully completed the interviewing phase with one company and am waiting for them to send me my contract. I might also still hear back from a second company with which I interviewed last week. Exciting times.
 
-Since there are already a lot of helpful posts and articles on specific application steps (e.g. resume writing, technical interview) out there, I will keep this post more general and instead provide a few of my favorite pieces of advice per step.
+Since there are already a lot of helpful posts and articles on specific application steps (e.g. resume writing, technical interview) out there, I will keep this post more general and instead provide a few of my favorite pieces of advice for each step.
 
 
 # 2. Before you apply
 
 
+If you are considering a developer career at all (even if you're just playing with the idea), start building your portfolio right away. Be visible. Get familiar with your code editor and git and put your work on GitHub. That way, potential employers who are visiting your GitHub site will see all those green squares and know that you have been coding consistently. 
+If you have built something cool, pin the repo and show it off.
+
+You can always delete repos later or make them private, but you cannot build a commit history. I think we might be a bit ashamed of our code sometimes (I know, I cringe when I look at stuff I wrote a few months ago). But even if our past projects are far from perfect, they still show that we a) built something and b) that we have developed, since the code in more recent repos will (hopefully) be less cringeworthy. 
