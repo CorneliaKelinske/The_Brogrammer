@@ -24,10 +24,23 @@ As I am writing this post, I have successfully completed the interviewing phase 
 Since there are already a lot of helpful posts and articles on specific application steps (e.g. resume writing, technical interview) out there, I will keep this post more general and instead provide a few of my favorite pieces of advice for each step.
 
 
-# 2. Before you apply
+# 2. The moment you consider a programming career
 
 
-If you are considering a developer career at all (even if you're just playing with the idea), start building your portfolio right away. Be visible. Get familiar with your code editor and git and put your work on GitHub. That way, potential employers who are visiting your GitHub site will see all those green squares and know that you have been coding consistently. 
+If you are considering a developer career at all (even if you're just playing with the idea), start building your portfolio right away. Be visible. Get familiar with your code editor and git and put your work on GitHub. That way potential employers who are visiting your GitHub site will see all those green squares and know that you have been coding consistently. 
 If you have built something cool, pin the repo and show it off.
 
-You can always delete repos later or make them private, but you cannot build a commit history. I think we might be a bit ashamed of our code sometimes (I know, I cringe when I look at stuff I wrote a few months ago). But even if our past projects are far from perfect, they still show that we a) built something and b) that we have developed, since the code in more recent repos will (hopefully) be less cringeworthy. 
+You can always delete repos later or make them private, but you cannot build a commit history. I think we might be a bit ashamed of our code sometimes (I know, I cringe when I look at stuff I wrote just a few months ago). But even if our past projects are far from perfect, they still show that we a) built something and b) that we have developed, since the code in more recent repos will (hopefully) be less cringe-worthy.
+
+
+# 3. Before you apply
+
+
+Let's assume you have put the idea of becoming a developer into action, you have put in the work and you are actively looking for a job. Once again, it is worth to do some upfront work. 
+
+Double-check your GitHub profile. Spruce it up. Pin your best repos, upload a good profile picture and add a profile [README](https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/customizing-your-profile/managing-your-profile-readme).
+
+Create a LinkedIn profile, add any relevant skills, education and employment history and link your GitHub page. You can also mark yourself as "Open to work". To be honest, I am not a big fan of LinkedIn and I can't say that it has helped me much in my job hunt, however, I did notice that a lot of the online application forms I filled in asked for a LinkedIn page, so I guess it is still good to have one in place.
+
+Put some effort into your resume, both with regard to content and the design. Especially if you are an absolute newbie and maybe a candidate that companies might be more inclined to dismiss due to the lack of production experience, you want to make sure that your resume stands out (in a good way) from the rest. I used [Canva](canva.com) to create mine, and I must say, I'm pretty pleased with the result. Make sure you list all your technical skills. Mention any programming languages, frameworks, libraries etc. that you have worked with. Once again, I think it is a good idea to provide a link to your GitHub page and if you have any projects deployed, link those as well. Another important factor to consider is that while you might not have experience as a developer, you probably worked in a different job before. Identify the qualities from your previous career that will carry over to your new career and list those as well. To give you an example: as a result of my previous career, I am highly organized, reliable, good at communicating, able to work independently, but also as part of a team etc. You get the idea. The message you want to send is "I will be a good employee/contractor".
+
