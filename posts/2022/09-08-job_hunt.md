@@ -46,5 +46,19 @@ Put some effort into your resume, both with regard to content and the design. Es
 
 Another thing I recommend preparing is a cover letter. I used Canva for making a nice one, but I also had a simple Google doc where I just typed down a rough version. I'm not saying you should send the same letter to any company. You'll still have to make individual adjustments. But there is a certain structure and certain points that I included in all my cover letters. I start out with saying where I read the job ad and what I liked about the job description and/or the company. I then highlight some of my experience in Elixir (projects, courses) as well as the professional experience I have due to my previous career. And I conclude with a link to my GitHub page.
 
-I also have a few lines saved in Google docs that I can use when I am contacting somebody on Slack. Once again, it's just the basic text that I can use as a starting point. 
+I also have a few lines saved in Google docs that I can use when I am contacting somebody on Slack. Once again, it's just the basic text that I can use as a starting point.
+
+
+# 4. When you apply
+
+
+The first question is probably: where do you find job opportunities to apply for. My two go-to places for the most up-to-date offers are the Elixir Slack job channel and the [Elixir Forum](https://elixirforum.com/c/work/elixir-jobs/16). 
+If you are subscribed to newsletters of community members who are recruiting, reaching out is certainly a great idea.
+
+If you are a junior developer, you'll probably notice that the vast majority of job offers is for seniors. In addition, the few opportunities that are advertised as "Junior/Mid-level" often want somebody with little to no Elixir knowledge but 5+ years of production experience in another language. So what do you do, if you are a newbie like me, with no prior programming experience?
+You apply anyway. You have nothing to loose and everything to gain. Just be honest about where you are at in your career.
+Don't worry if you don't meet all the requirements listed in the job descriptions. Somebody more experienced once told me that they are more like a wish list and not set in stone.
+This being said, I still think it makes sense to take a minute to decide whether an application is worth it. I, for example, will not apply if they are expressly looking for people in Europe, super senior roles or full-stack developers. I'm also more reluctant if the offer is by an early start-up or involves betting or NFTs/crypto stuff. 
+
+
 
