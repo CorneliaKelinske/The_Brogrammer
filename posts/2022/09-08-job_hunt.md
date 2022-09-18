@@ -74,6 +74,53 @@ The bottom line is, no matter through what channels you apply, you want to show 
 # 5. The first interview
 
 
+You did it! You made it into the next round! A company got back to you and invites you for a first interview. This one is often called the "cultural interview". You will talk to somebody from the company (it can be anyone HR rep, co-founder, VP of engineering) and learn more about the company and the role you have applied for, and they get to know you a little better. This might be weird, but I have to admit that I actually enjoy these cultural interviews. They have all been very pleasant! 
+
+The one thing that I read in another blog and that really took a lot of the nervousness away from me was that, in the first interview, it is not just you who wants to convince the company to hire you, but it is also the other way around: the company want to convince you to work for them!
+
+In terms of preparation: have a rough idea of what you will tell them about you and your coding journey. And prepare a few questions for them. I usually have a piece of paper with some questions on my desk when I am doing these calls. What you are going to ask them depends on who you are talking to. If you are not talking to someone from the Elixir team, you will likely skip the more technical questions. I use the first interview to find out about how the company works, whether they work asynchronously or if there are a lot of meetings. You can try to find out what the workflow and onboarding would look like. How flexible you are in terms of working hours etc. 
+
+I also recommend to figure out a ballpark for the salary you would like to get for the job. Especially if the job ad did not include salary information, they might ask you during that first interview how much you expect to get paid. 
+
+All in all, I think the best advice I can give for this first interview is: Be yourself! Be confident in what you know and honest about what you don't know. If you are a junior developer, embrace it. Signal that you are willing to learn and to work hard.
+
+
+# 6. The take-home assignment
+
+
+Some companies give you a take-home assignment that you have to submit before they proceed to the technical interview. This is your opportunity to shine. Give it your all, but at the same time, don't overthink it!
+What worked for me was my usual approach of planning the big picture and then breaking it down into smaller steps.
+Make sure your code works. If at all possible, write tests for your assignment, add typespecs and if there are optional steps to the assignment that you are able to do, do them. Once again, demonstrate that you are making an effort and that you are taking the assignment and the job opportunity seriously. 
+
+What I like about take-home assignments, other than the fact that I don't have to code that stuff live, is that ideally it also gives you an idea of what kind of work you will be doing once you get the job. This can be reassuring when you find that the assignment as doable, but it can also be a point at which you have to be honest to yourself and admit that maybe you are not a good fit for that particular role. I'm not suggesting that you give in to self-doubt as soon as it arises (for me that would be all the time), but if you are not making good progress on the assignment and you find that it would take you an unreasonable amount of time to complete it, it might be that the company's expectations and your current skill level do not match. If this happens, don't feel discouraged. The fact that you are not ready for that particular job, does not mean you're not ready for the next one either. In addition, the assignment might have given you some idea of what your weak points are and what you need to work on. 
+
+
+# 7. The technical interview
+
+
+This is the step that freaks me out the most. I've done two so far and they were complete opposites. The first one was a two hour torture session (at least that's how I felt) that included a presentation of my take-home assignment, follow-up questions and then pretty much just one big architectural, problem-solving questions that was based on the company's specific app and requirements. I passed, but I didn't feel good afterwards.
+
+The other one was just 30 minutes of general knowledge questions. I think I did okay, but haven't heard back yet. 
+
+I'm not sure if I am qualified to give advice on this step, but here are my personal takeaways:
+
+If you receive advance information about the interview, read it thoroughly and prepare accordingly. In case of my second technical interview, I was told during the culture interview that they would set up the technical, so I just asked at that time what to expect. Stay calm. I think it's okay to think through your answers before you say something. If it's a problem-solving questions, you could try to think aloud, so the interviewers can see how you are working through the problem. And once again, be yourself, be honest about what you know and what you don't know (yet).
+
+
+# Bonus tip: the waiting game
+
+
+![This time, we are in the Star Wars Universe. Yoda meme.](yoda.png "Listen to Master Yoda")
+
+
+No matter what stage of the application process you are at, be prepared to wait. A lot! It might take weeks before a company contacts you after you submitted your application. You might not hear back after the technical interview for quite a while. And you might wait for the contract for what seems - at least to you - like ages. 
+
+I am not good at this patience thing. And to me, all this waiting is quite a challenge. Especially since it is such a stark contrast to the excitement of the application and interviewing phase. It leaves me with far too much time to doubt myself and to lose confidence in my coding skills. The remedy I found for me is to write code and to be productive in other ways (like this blog).
+So if you are the impatient type, like me, I highly recommend brainstorming for ideas of how to keep yourself occupied during the waiting periods.
+
+
+
+
 
 
 
