@@ -55,10 +55,27 @@ I also have a few lines saved in Google docs that I can use when I am contacting
 The first question is probably: where do you find job opportunities to apply for. My two go-to places for the most up-to-date offers are the Elixir Slack job channel and the [Elixir Forum](https://elixirforum.com/c/work/elixir-jobs/16). 
 If you are subscribed to newsletters of community members who are recruiting, reaching out is certainly a great idea.
 
-If you are a junior developer, you'll probably notice that the vast majority of job offers is for seniors. In addition, the few opportunities that are advertised as "Junior/Mid-level" often want somebody with little to no Elixir knowledge but 5+ years of production experience in another language. So what do you do, if you are a newbie like me, with no prior programming experience?
+As a junior developer, you'll probably notice that the vast majority of job offers is for seniors. In addition, the few opportunities that are advertised as "Junior/Mid-level" often want somebody with little to no Elixir knowledge but 5+ years of production experience in another language. So what do you do, if you are a newbie like me, with no prior programming experience?
 You apply anyway. You have nothing to loose and everything to gain. Just be honest about where you are at in your career.
 Don't worry if you don't meet all the requirements listed in the job descriptions. Somebody more experienced once told me that they are more like a wish list and not set in stone.
-This being said, I still think it makes sense to take a minute to decide whether an application is worth it. I, for example, will not apply if they are expressly looking for people in Europe, super senior roles or full-stack developers. I'm also more reluctant if the offer is by an early start-up or involves betting or NFTs/crypto stuff. 
+This being said, I still think it makes sense to take a minute to decide whether an application is worth it. I, for example, will not apply if they are expressly looking for people in Europe, super senior roles or full-stack developers. I'm also more reluctant if the offer is by an early start-up or involves betting or NFTs/crypto stuff. But that's just me. The factors that matter to you might be entirely different.
+
+Once you have found an opportunity that you would like to apply for, take a minute and check out the company. Have a look at their website to get a better idea of what they are doing. Maybe take a few notes of things that you like about the company. Also make sure to read through the job ad thoroughly. It's good if you can refer to some of the points mentioned therein in your cover letter.
+
+The next step depends on where you found the opportunity and how they want you to apply. If the job was advertised on Slack and you are supposed to contact the company on Slack as well, go to your google doc with your draft text, adjust it to the company that you are applying with. Add something you read on the website, that you liked, or highlight why you would be a good fit based on the job ad, and then go ahead and message them. I usually attach my resume as well. That way, I save them the extra step of asking for it later, and I show that I have my stuff together (and my resume looks pretty good). 
+
+A side note for people in Canada: often jobs are advertised as U.S. only, but it can be worth it to reach out anyway and ask if Canadian residents might be able to be considered after all, since it can be easier for U.S. companies to hire somebody from Canada as a contractor based on a W-8BEN contract than hiring a U.S. citizen in another state.
+
+If the job application is to be submitted via an online form, make sure you take the extra step in this case as well: if you have the opportunity to upload a cover letter, do so. If there is a field for a message, include one. Once again, you want to mention something that you read about the company or in the ad in the cover letter or the message.
+
+The bottom line is, no matter through what channels you apply, you want to show your potential future employers that you put some effort into your application and that you want to work for them, not just anybody.
+
+
+# 5. The first interview
+
+
+
+
 
 
 
