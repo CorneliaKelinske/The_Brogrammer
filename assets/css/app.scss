@@ -2,6 +2,56 @@
 @import "bulma";
 @import "custom";
 
+/* Syntax Highlighting */
+
+pre {
+  background-color: rgb(36, 45, 56);
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.18);
+  -webkit-box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.18);
+  -moz-box-shadow: 6px 7px 10px 0px rgba(0, 0, 0, 0.18);
+}
+
+.kd,
+.k {
+  color: rgb(219, 112, 219);
+}
+
+.nc,
+.p {
+  color: rgb(250, 239, 79);
+}
+
+.sr,
+.se,
+.nf,
+.kn {
+  color: rgb(146, 195, 235)
+}
+
+.s,
+.c {
+  color: rgb(168, 164, 164)
+}
+
+.na,
+.ni {
+  color: rgb(221, 99, 99);
+}
+
+.n,
+.o,
+.no {
+  color: rgb(231, 231, 231)
+}
+
+.ss {
+  color: rgb(31, 236, 226)
+}
+
 // our new sassy style
 $phoenix-orange: #f05423;
 .phx-hero {
