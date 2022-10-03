@@ -22,7 +22,7 @@ Then, as with all libraries, we need to head over to the [Finch documentation](h
 
 With the documentation open, we can then add Finch to our dependencies in the `mix.exs` file
 
-```
+```elixir
 def deps do
     [
       {:finch, "~> 0.13.0"}  
@@ -31,7 +31,7 @@ def deps do
 
 run `mix deps.get` and add Finch to our supervision tree in the `application.ex` file
 
-```
+```elixir
 children = [
   {Finch, name: NewApp.Finch}
 ] 
@@ -47,7 +47,7 @@ And now we are ready to query away.
 
 Next, the docs show us how to build and run a request to an API:
 
-```
+```elixir
 Finch.build(:get, "https://hex.pm") |> Finch.request(MyFinch)
 ```
 
@@ -58,7 +58,7 @@ Since laughing is healthy, we will use this one: https://api.chucknorris.io/.
 
 The API docs tell us we can make a GET request to https://api.chucknorris.io/jokes/random to get a random joke, no query params or API key required. So let's do that:
 
-```
+```elixir
 Finch.build(:get, "https://api.chucknorris.io/jokes/random") |> Finch.request(NewApp.Finch)
 ```
 
@@ -84,7 +84,7 @@ To get cat-related Chuck Norris jokes, we would have to pass the entire URL as t
 
 If our search term is the only param that we are adding to our request, we can probably get away with writing something like this:
 
-```
+```elixir
 def query_api(thing_we_are_searching_for) do
   Finch.build(:get, "https://api.chucknorris.io/jokes/search?query=#{thing_we_are_searching_for}") |> Finch.request(NewApp.Finch)
 end 
@@ -104,7 +104,7 @@ Let's take a more dynamic approach instead!
 
 I'm currently big into writing helper modules, so let's put our query builder functions into a helper module.
 
-```
+```elixir
 defmodule NewApp.FinchHelpers do
   @moduledoc """
   Functions for building an API call through Finch
@@ -135,7 +135,7 @@ What I like to do in my main module is setting both the params and the base HTTP
 
 Accordingly, my main module in the current example would look like this:
 
-```
+```elixir
 defmodule NewApp.MainModule do
 
 alias NewApp.FinchHelpers
