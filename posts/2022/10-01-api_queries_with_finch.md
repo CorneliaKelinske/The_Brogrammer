@@ -129,7 +129,7 @@ defmodule NewApp.FinchHelpers do
   end
 ```
 
-In this example, we are adding an API key, a query term (q) and a limit to our URL. All the params are passed into our main `build_query/2` function in a map so that both keys and values can be used for building the query.
+In this example, we are adding an API key, the query variable `q` and a limit to our URL. All the parameters are passed into our main `build_query/2` function in a map so that both keys and values can be used for building the query.
 
 What I like to do in my main module is setting both the params and the base HTTP address as module attributes. That way, I can see at one glance what parameters my API requires, and if I need to make changes to the address, I can do so in one place.
 
