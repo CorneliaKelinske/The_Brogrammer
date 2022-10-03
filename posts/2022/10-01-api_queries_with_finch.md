@@ -16,7 +16,7 @@ coding, elixir, api_calls, finch
 
 # 1. The set-up
 
-The first thing that is good to know about Finch is that we want to add it to our supervision tree. This means that, ideally, we'll remember to create our new app with the `mix new new_app --sup` command so that we get our `application.ex` file with the supervision tree automatically generated.
+The first thing that is good to know about Finch is that we want to add it to our supervision tree. Generate a new project with `mix new new_app --sup` command so that we get our `application.ex` file with the supervision tree automatically generated.
 
 Then, as with all libraries, we need to head over to the [Finch documentation](https://hexdocs.pm/finch/Finch.html).
 
