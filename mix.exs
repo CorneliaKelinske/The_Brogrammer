@@ -74,7 +74,7 @@ defmodule TheBrogrammer.MixProject do
       {:bulma, "0.9.3"},
       {:hackney, "~> 1.17"},
       {:postex, "~> 0.1.6"},
-      {:ex_robo_cop, "~> 0.1.0"},
+      {:ex_robo_cop, "~> 0.1.1"},
       # Tooling
       {:excoveralls, "~> 0.10", only: :test},
       {:credo, "~> 1.5", only: :test, runtime: false},
