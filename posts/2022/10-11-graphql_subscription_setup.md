@@ -31,17 +31,103 @@ All the usual stuff.
 With this out of the way, let's get started!
 
 
-# 3. Subscription set-up - the vanilla variety
+# 3. Subscription set-up - underlying infrastructure
 
-As in most cases, it is worth checking out the corresponding [hex.docs](https://hexdocs.pm/absinthe/subscriptions.html) first.
+As in most cases, it is worth checking out the [hex.docs](https://hexdocs.pm/absinthe/subscriptions.html) first.
 Based on those and on what I have learned in the course plus some personal experience, I have come up with the following steps for the basic set-up:
 
-1. We need to add some dependencies (if we are running an app as described in 2. above we already have those): 
-    ```elixir
-    {:absinthe, "~> 1.6"},
-	{:absinthe_plug, "~> 1.5"},
-	{:absinthe_phoenix, "~> 2.0.0"}
-    ```
+First, we need to add some dependencies (if we are running an app as described in 2. above we'll already have those): 
+
+```elixir
+{:absinthe, "~> 1.6"},
+{:absinthe_plug, "~> 1.5"},
+{:absinthe_phoenix, "~> 2.0.0"}
+```
+
+Then we have to create a `user_socket.ex` file (it goes into the `my_app_web_folder`) and put this piece of code in it:
+
+```elixir
+defmodule MyAppWeb.UserSocket do
+  use Phoenix.Socket
+  use Absinthe.Phoenix.Socket,
+   schema: MyAppWeb.Schema
+ def connect(_params, socket) do
+  {:ok, socket}
+ end
+ def id(_socket), do: nil
+end     
+```
+
+Note: this is the most basic `UserSocket`. If you look into the [hex.docs](https://hexdocs.pm/absinthe/subscriptions.html), you'll see how you can put your current user into the socket.
+
+The next step is one that I have forgotten many times, so don't forget to do this! We are heading over to `endpoint.ex` to add our `UserSocket`. When you open the file, you'll see (probably on line 2) `use Phoenix.Endpoint`. Right below, we add this:
+
+```elixir
+use Absinthe.Phoenix.Endpoint
+socket "/socket", MyAppWeb.UserSocket,
+  websocket: true,
+  longpoll: false
+```
+
+At this point, we should also make sure our `UserSocket` is included in our router for our GraphiQL route like so:
+
+```elixir
+if Mix.env() === :dev do
+  forward "/graphiql", Absinthe.Plug.GraphiQL,
+    schema: GraphqlApiWeb.Schema,
+    socket: GraphqlApiWeb.UserSocket,
+    interface: :playground
+end
+```
+
+And last but not least, we need to tweak our `application.ex` file and add `Absinthe.Subsription` to the list of children:
+
+```elixir    
+chilrdren =
+    [
+     {Absinthe.Subscription, [MyAppWeb.Endpoint]}
+    ]
+```
+
+# 4. Creating a subscription - vanilla variety
+
+Now that everything we need to run our subscription successfully is in place, it is time to write the subscription itself.
+
+Just to make sure that we are on the same page, I structure my GraphQL apps as follows:
+
+```
+my_app_web
+│   │   ├── auth_plug.ex
+│   │   ├── endpoint.ex
+│   │   ├── gettext.ex
+│   │   ├── middlewares
+│   │   │   ├── authentication.ex
+│   │   │   └── handle_errors.ex
+│   │   ├── resolvers
+│   │   │   ├── auth_token.ex
+│   │   │   ├── preference.ex
+│   │   │   ├── resolver_hit.ex
+│   │   │   └── user.ex
+│   │   ├── router.ex
+│   │   ├── schema
+│   │   │   ├── mutations
+│   │   │   │   ├── preference.ex
+│   │   │   │   └── user.ex
+│   │   │   ├── queries
+│   │   │   │   ├── auth_token.ex
+│   │   │   │   ├── preference.ex
+│   │   │   │   ├── resolver_hit.ex
+│   │   │   │   └── user.ex
+│   │   │   └── subscriptions
+│   │   │       ├── auth_token.ex
+│   │   │       ├── preference.ex
+│   │   │       └── user.ex
+│   │   ├── schema.ex
+
+```
+
+
+
 
 
 
