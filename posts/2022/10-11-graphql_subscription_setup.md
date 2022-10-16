@@ -28,6 +28,61 @@ Let's assume we have a Phoenix app with a GraphQL/Absinthe backend. We are using
 Our app has users and we are using GraphQL queries to query users based on certain criteria and mutations to do things such as create or update users.
 All the usual stuff.
 
+The app is organized like this:
+
+```
+my_app_web   
+├── resolvers
+│   ├── some_resolver.ex 
+│   └── user.ex
+├── router.ex
+├── schema
+│   ├── mutations
+│   │   ├── some_mutation.ex
+│   │   └── user.ex
+│   ├── queries
+│   │   ├── some_query.ex
+│   │   └── user.ex
+│   └── subscriptions
+│       └── user.ex
+|── types
+|   ├── some_type.ex
+|   └── user.ex 
+├── schema.ex
+
+```
+
+So the mutations, queries and types are defined in separate modules and I import them and their fields into the `schema.ex` file, which looks like this:
+
+```elixir
+defmodule MyAppWeb.Schema do
+  @moduledoc false
+  use Absinthe.Schema  
+
+  import_types MyAppWeb.Types.SomeType
+  import_types MyAppWeb.Types.User 
+  import_types GraphqlApiWeb.Schema.Queries.SomeQuery  
+  import_types GraphqlApiWeb.Schema.Queries.User  
+  import_types GraphqlApiWeb.Schema.Mutations.SomeMutation
+  import_types GraphqlApiWeb.Schema.Mutations.User 
+  import_types GraphqlApiWeb.Schema.Subscriptions.User
+
+  query do
+    import_fields :some_query_queries   
+    import_fields :user_queries   
+  end
+
+  mutation do
+    import_fields :some_mutations_mutations
+    import_fields :user_mutations
+  end
+
+  subscription do    
+    import_fields :user_subscriptions
+  end
+end
+```
+
 With this out of the way, let's get started!
 
 
@@ -83,7 +138,7 @@ end
 And last but not least, we need to tweak our `application.ex` file and add `Absinthe.Subsription` to the list of children:
 
 ```elixir    
-chilrdren =
+children =
     [
      {Absinthe.Subscription, [MyAppWeb.Endpoint]}
     ]
@@ -92,39 +147,25 @@ chilrdren =
 # 4. Creating a subscription - vanilla variety
 
 Now that everything we need to run our subscription successfully is in place, it is time to write the subscription itself.
+Here is the simplest version, a subscription without any arguments, where we subscribe to the `create_user` mutation:
 
-Just to make sure that we are on the same page, I structure my GraphQL apps as follows:
+```elixir
+defmodule MyAppWeb.Schema.Subscriptions.User do
+  @moduledoc false
+  use Absinthe.Schema.Notation
 
+  object :user_subscriptions do
+    @desc "Broadcasts newly created user"
+    field :created_user, :user do
+      config fn _, _ -> {:ok, topic: "new user"} end
+
+      trigger :create_user, topic: fn _ -> "new user" end
+    end
+  end
+end
 ```
-my_app_web
-│   │   ├── auth_plug.ex
-│   │   ├── endpoint.ex
-│   │   ├── gettext.ex
-│   │   ├── middlewares
-│   │   │   ├── authentication.ex
-│   │   │   └── handle_errors.ex
-│   │   ├── resolvers
-│   │   │   ├── auth_token.ex
-│   │   │   ├── preference.ex
-│   │   │   ├── resolver_hit.ex
-│   │   │   └── user.ex
-│   │   ├── router.ex
-│   │   ├── schema
-│   │   │   ├── mutations
-│   │   │   │   ├── preference.ex
-│   │   │   │   └── user.ex
-│   │   │   ├── queries
-│   │   │   │   ├── auth_token.ex
-│   │   │   │   ├── preference.ex
-│   │   │   │   ├── resolver_hit.ex
-│   │   │   │   └── user.ex
-│   │   │   └── subscriptions
-│   │   │       ├── auth_token.ex
-│   │   │       ├── preference.ex
-│   │   │       └── user.ex
-│   │   ├── schema.ex
 
-```
+
 
 
 
