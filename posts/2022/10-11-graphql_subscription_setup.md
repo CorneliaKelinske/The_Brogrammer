@@ -14,18 +14,18 @@ coding, elixir, graphql, absinthe, subscriptions
 
 # 1. Why am I writing this post?
 
-I have been taking the (Learn Elixir)[https://learn-elixir.dev/] course, where a lot of the assignments involve the use of GraphQL and Absinthe. And what can I say, I like it. However, the one part that I found a bit more difficult was dealing with subscriptions.
+I have been taking the (Learn Elixir)[https://learn-elixir.dev/] course, where a lot of the assignments involve GraphQL and Absinthe. And what can I say? I like it. However, the one part that I found a bit more difficult was dealing with subscriptions.
 While writing and testing queries and mutations is well-documented and discussed in a number of resources, information on setting up and, in particular, testing subscriptions is harder to come by. I have spent quite a bit of time on this topic and, as a result, have developed a solid love-hate relationship with those subscriptions. 
-But to answer the question as to why am I writing this post, or rather this 3-part series: for future reference! Everything I know about subscriptions in one place. So let's get started!
+But to answer the question as to why am I writing this post: for future reference! Everything I know about subscriptions in one place. So let's get started!
 
 
 # 2. About the underlying app
 
-Before we dive into the subscription set-up, I will describe briefly what kind of app we are working in.
+Before we dive into the subscription setup, I will describe what kind of app we are working with.
 
 Let's assume we have a Phoenix app with a GraphQL/Absinthe backend. We are using [GraphiQL](https://hexdocs.pm/absinthe_plug/Absinthe.Plug.GraphiQL.html), so we can play around with our queries, mutations and subscriptions.
 
-Our app has users and we are using GraphQL queries to query users based on certain criteria and mutations to do things such as create or update users.
+Our app has users, and we are using GraphQL queries to query users based on certain criteria and mutations to do things such as create or update users.
 All the usual stuff.
 
 The app is organized like this:
@@ -52,7 +52,7 @@ my_app_web
 
 ```
 
-So the mutations, queries and types are defined in separate modules and I import them and their fields into the `schema.ex` file, which looks like this:
+We can see that the mutations, queries and types are defined in separate modules. I import them and their fields into the `schema.ex` file, which looks like this:
 
 ```elixir
 defmodule MyAppWeb.Schema do
@@ -86,12 +86,12 @@ end
 With this out of the way, let's get started!
 
 
-# 3. Subscription set-up - underlying infrastructure
+# 3. Subscription set-up - the infrastructure
 
 As in most cases, it is worth checking out the [hex.docs](https://hexdocs.pm/absinthe/subscriptions.html) first.
-Based on those and on what I have learned in the course plus some personal experience, I have come up with the following steps for the basic set-up:
+Based on those and on what I have learned in the course, plus some personal experience, I have come up with the following steps for the basic setup:
 
-First, we need to add some dependencies (if we are running an app as described in 2. above we'll already have those): 
+First, we need to add some dependencies (if we are running an app as described in 2. above, we'll already have those): 
 
 ```elixir
 {:absinthe, "~> 1.6"},
@@ -164,6 +164,75 @@ defmodule MyAppWeb.Schema.Subscriptions.User do
   end
 end
 ```
+
+As we can see, the subscription is triggered by the `create_user` mutation, and we don't really have to do anything with the 
+topic function since we don't have any arguments in this subscription.
+
+Let's take it up a notch and add a subscription to the `update_user` mutation:
+
+```elixir
+defmodule MyAppWeb.Schema.Subscriptions.User do
+  @moduledoc false
+  use Absinthe.Schema.Notation
+
+  object :user_subscriptions do
+    @desc "Broadcasts when a given user is updated"
+    field :updated_user, :user do
+      arg :id, non_null(:id)
+
+      config fn args, _ -> {:ok, topic: key(args)} end
+
+      trigger :update_user, topic: &key/1
+    end
+  end
+
+  defp key(%{user_id: id}) do
+    "user_update:#{id}"
+  end
+end   
+```
+In this case, we do have an argument of "id" so we can get notified when a specific user is updated. This argument is carried over into our topic function. I like using a `key/1` function in my topic function. That way, I avoid typos and mismatches between the topic in `config` and the topic in `trigger`.
+
+
+# 5. Manually triggered subscriptions
+
+We also have the option to trigger subscriptions manually, i.e. not via the `trigger`. In those cases, we have to use `Absinthe.Subscription.publish/3`. Let's say that somewhere in our code we are generating user tokens for our users, and we want to know when such a token was generated for a given user. We start by writing our subscription:
+
+```elixir
+defmodule MyAppWeb.Schema.Subscriptions.AuthToken do
+  @moduledoc false
+  use Absinthe.Schema.Notation
+
+  object :auth_token_subscriptions do
+    @desc "Broadcasts when a new auth token is generated for a user"
+    field :auth_token_generated, :auth_token do
+      arg :user_id, non_null(:id)
+
+      config fn %{user_id: user_id}, _ -> {:ok, topic: "user_auth_token_generated:#{user_id}"} end
+    end
+  end
+end
+```
+
+Note: since the `topic` function only appears once, I decided against writing a separate `key/1` function.
+
+Now, we just have to find the place where our auth_token is generated and add this little bit of code:
+
+```elixir
+auth_token = "Whatever we generated; only adding this so we have an auth_token"
+Absinthe.Subscription.publish(MyAppWeb.Endpoint, auth_token,
+      auth_token_generated: "user_auth_token_generated:#{key}"
+    )
+```
+
+There are three important things to know with regard to `publish/3`:
+1. the second argument needs to match the return type in our subscription
+2. the key in the third argument is identical to the subscription field name
+3. the value in the third argument must be the topic of our subscription
+
+And that's it.
+
+In the next post, we'll see how we can test our subscriptions because, let's be honest: testing manually via the GraphiQL interface is not the way.
 
 
 
