@@ -1,5 +1,5 @@
 ==title==
-GrapQL subscriptions with Absinthe - the set-up
+GrapQL subscriptions with Absinthe - the setup
 
 ==author==
 Cornelia Kelinske
@@ -15,8 +15,7 @@ coding, elixir, graphql, absinthe, subscriptions
 # 1. Why am I writing this post?
 
 I have been taking the (Learn Elixir)[https://learn-elixir.dev/] course, where a lot of the assignments involve GraphQL and Absinthe. And what can I say? I like it. However, the one part that I found a bit more difficult was dealing with subscriptions.
-While writing and testing queries and mutations is well-documented and discussed in a number of resources, information on setting up and, in particular, testing subscriptions is harder to come by. I have spent quite a bit of time on this topic and, as a result, have developed a solid love-hate relationship with those subscriptions. 
-But to answer the question as to why am I writing this post: for future reference! Everything I know about subscriptions in one place. So let's get started!
+While writing and testing queries and mutations is well-documented and discussed in a number of resources, information on setting up and, in particular, testing subscriptions is harder to come by. I have spent quite a bit of time on this topic and, as a result, have developed a solid love-hate relationship with those subscriptions.But to answer the question as to why am I writing this post: for future reference! Everything I know about subscriptions in one place. So let's get started!
 
 
 # 2. About the underlying app
@@ -61,11 +60,11 @@ defmodule MyAppWeb.Schema do
 
   import_types MyAppWeb.Types.SomeType
   import_types MyAppWeb.Types.User 
-  import_types GraphqlApiWeb.Schema.Queries.SomeQuery  
-  import_types GraphqlApiWeb.Schema.Queries.User  
-  import_types GraphqlApiWeb.Schema.Mutations.SomeMutation
-  import_types GraphqlApiWeb.Schema.Mutations.User 
-  import_types GraphqlApiWeb.Schema.Subscriptions.User
+  import_types MyAppWeb.Schema.Queries.SomeQuery  
+  import_types MyAppWeb.Schema.Queries.User  
+  import_types MyAppWeb.Schema.Mutations.SomeMutation
+  import_types MyAppWeb.Schema.Mutations.User 
+  import_types MyAppWeb.Schema.Subscriptions.User
 
   query do
     import_fields :some_query_queries   
@@ -91,7 +90,7 @@ With this out of the way, let's get started!
 As in most cases, it is worth checking out the [hex.docs](https://hexdocs.pm/absinthe/subscriptions.html) first.
 Based on those and on what I have learned in the course, plus some personal experience, I have come up with the following steps for the basic setup:
 
-First, we need to add some dependencies (if we are running an app as described in 2. above, we'll already have those): 
+First, we need to add some dependencies to `mix.exs` (if we are running an app as described in 2. above, we'll already have those): 
 
 ```elixir
 {:absinthe, "~> 1.6"},
@@ -106,10 +105,12 @@ defmodule MyAppWeb.UserSocket do
   use Phoenix.Socket
   use Absinthe.Phoenix.Socket,
    schema: MyAppWeb.Schema
+
  def connect(_params, socket) do
   {:ok, socket}
  end
  def id(_socket), do: nil
+
 end     
 ```
 
@@ -129,8 +130,8 @@ At this point, we should also make sure our `UserSocket` is included in our rout
 ```elixir
 if Mix.env() === :dev do
   forward "/graphiql", Absinthe.Plug.GraphiQL,
-    schema: GraphqlApiWeb.Schema,
-    socket: GraphqlApiWeb.UserSocket,
+    schema: MyAppWeb.Schema,
+    socket: MyAppWeb.UserSocket,
     interface: :playground
 end
 ```
