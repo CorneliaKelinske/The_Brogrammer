@@ -86,6 +86,8 @@ We can see that our `SubscriptionCase` uses both `ChannelCase` and `Absinthe.Pho
 
 # 3. The test
 
+Here is what a test for a basic, mutation-triggered subscription looks like:
+
 ```elixir
 defmodule MyAppWeb.Schema.Subscriptions.UserTest do
   use MyAppWeb.SubscriptionCase
@@ -102,7 +104,7 @@ defmodule MyAppWeb.Schema.Subscriptions.UserTest do
 
   @created_user_doc """
   subscription CreatedUser {
-   createdUser {
+  createdUser {
      id
      name
      email      
@@ -152,4 +154,10 @@ defmodule MyAppWeb.Schema.Subscriptions.UserTest do
     end
   end
 end
-```elixir
+```
+
+As we can see, in the example above, we start by building 'docs' both for the mutation we are subscribed to and for the corresponding subscription. When we write these docs, we are basically building the same query that our GraphiQL interface would built based on our input. We are specifying the arguments and types in the first line of the doc. In the second line, we have the name of our mutation or subscription and the arguments again, and below that is what the mutation/subscription returns.
+
+By passing the docs into `push_doc/3` later on in the subscription test (or, likewise, when we pass a doc into `Absinthe.run/3` in a mutation or query test) we utilize the internal API that Absinthe uses, thus bypassing the router.
+
+In the actual test, we build the socket by passing in the `%{socket: socket}` map. We then push the subscription doc to the socket and assert that the subscription ID is returned. 
