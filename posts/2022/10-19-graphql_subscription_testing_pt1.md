@@ -161,3 +161,15 @@ As we can see, in the example above, we start by building 'docs' both for the mu
 By passing the docs into `push_doc/3` later on in the subscription test (or, likewise, when we pass a doc into `Absinthe.run/3` in a mutation or query test) we utilize the internal API that Absinthe uses, thus bypassing the router.
 
 In the actual test, we build the socket by passing in the `%{socket: socket}` map. We then push the subscription doc to the socket and assert that the subscription ID is returned. 
+
+Next up, we push our mutation to the socket as well and assert that we get an `:ok` and a `reply` as well as that the reply contains the data with which we created the user in our `create_user` mutation.
+
+NOTE: Unlike `Absinthe.run/3`, `push_doc/3` will only pass through whatever is under the `variables` key in the third argument (`opts`). In other words, if, in your mutation test, you are passing information on under the `context` key in your `Absinthe.run/3` function (e.g. a secret key for authorization via an HTTP header) you will have to find a workaround in your subscription test. I will write more about that in the next post.
+
+But back to our example test, where there are only two steps left:
+We need to assert that data was pushed to the client and, last but not least, we assert that the data matches the data that we pushed in our `create_user` mutation and that the `subscription_id` we got back matches the `subscription_id` we got back when we first pushed our `@created_user_doc`.
+
+And that's it!
+
+
+
