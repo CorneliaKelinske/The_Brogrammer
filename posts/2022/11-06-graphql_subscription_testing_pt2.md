@@ -75,6 +75,21 @@ defmodule MyAppWeb.Schema.Subscriptions.AuthTokenTest do
 end
 ```
 
-Just like in the test for mutation-triggered subscriptions, we need to build a "doc" (document) for the subscription. We also need to set up a user, for whom the auth token will be generated. 
+Just like in the test for mutation-triggered subscriptions, we need to build a "doc" (document) for the subscription. We also need to set up a user, for whom the auth token will be generated. We pass both the `socket` and the `user` into the context map of our test and then start testing by pushing the subscription doc to the socket and asserting that the subscription ID is returned. Since our subscription requires the `argument` of `user_id`, we have to pass in `%{"user_id" => string_id}` under the `variables` key in `push_doc/3`.
+
+Next, we need to trigger our subscription. We do so by calling `TokenCache.put/2`, which is where the subscription is triggered.
+With the subscription triggered, the remainder of the test is identical to what we would do in case of a mutation-triggered subscription.
+
+No big deal!
 
 
+# 3. Random info
+
+As already mentioned in [part 2](https://connie.codes/post/graphql_subscription_testing_pt.1), the only part of the context that `push_doc/3` passes on is whatever is under the `variables` key. 
+I became acutely aware of this fact when I implemented an `auth_plug` for the mutations, requiring authentication via the HTTP header.
+
+This was no problem in the mutation test, where I was able to simply pass in the header info under 
+
+
+
+However, I did not have this option in the subscription test. 
