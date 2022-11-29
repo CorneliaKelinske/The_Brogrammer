@@ -1,5 +1,5 @@
 ==title==
-GrapQL subscriptions with Absinthe - beyond basic testing
+GraphQL subscriptions with Absinthe - Beyond basic testing
 
 ==author==
 Cornelia Kelinske
