@@ -53,7 +53,7 @@ One thing I learned from my dev husband (Hi [Alan](https://alanvardy.com/)!) is 
 
 Less than two months into the new job, and I don't recognize myself anymore. I vividly remember telling somebody less than half a year ago that mechanical keyboards were weird and that I hated the sound of my husband typing (Cherry Brown). Guess who is clicking away on Cherry Blues now? 
 I also invested in a bigger screen. But you know what: it's worth it. Having the ability to see my ticket, my code editor (in a larger window now) and what I'm producing on localhost has improved my life tremendously.
-Here is a picture of my current setup. Luckily my little desk has a drawer. Otherwise, I would have needed a bigger desk. Shout-out to my son, who let me borrow his Squishmallow as a rubber ducky substitute. Now I am slightly less crazy because I'm talking to the Squishmallow and not myself when I'm coding.
+Here is a picture of my current setup. Luckily my little desk has a drawer. Otherwise, I would have needed a bigger desk. Shout out to my son, who let me borrow his Squishmallow as a rubber ducky substitute. Now I am slightly less crazy because I'm talking to the Squishmallow and not myself when I'm coding.
 
 ![This should show my setup](setup.jpg "This is where the magic happens - or not")
 
