@@ -97,7 +97,7 @@ There were many days where I stayed on the computer much longer than I had origi
 # Final thoughts
 
 
-I hope some of these tips are helpful to you. I will heed my own advice in the future. Unfortunately, I no longer have a job as I am writing this. The CEO of the company I was working for had not been honest about the funding situation. As a result, the whole team was let go a few days ago. 
+I hope some of these tips are helpful to you. I'm now heeding my own advice in my second job, as my first one ended rather abruptly. The company I was working for ran out of funds and the whole dev team was let go. 
 
 
 
