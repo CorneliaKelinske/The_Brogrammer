@@ -41,19 +41,26 @@ You might even find the solution on your own. And if not, you will at least have
 
 This is another solid piece of advice. I can't express how grateful I am for all the people in my life who have mentored me in various ways.
 
-If you are new to Elixir or programming and if you're still a bit unsure about the whole thing and maybe not confident to reach out to anyone, let me tell you: the Elixir community is amazing. Almost everybody I have met on my coding journey so far has been helpful and welcoming. On this note, fee free to [contact me](https://connie.codes/contact) if there is anything I can help you with.
+If you are new to Elixir or programming and if you're still a bit unsure about the whole thing and maybe not confident to reach out to anyone, let me tell you: the Elixir community is amazing. Almost everybody I have met on my coding journey so far has been helpful and welcoming. On this note, feel free to [contact me](https://connie.codes/contact) if there is anything I can help you with.
 
 
-# 4. Follow the routes ...
+# 4. Follow the routes 
 
 
-if the app you're working on is a Phoenix app. By checking out the routes and seeing what leads to what, you will gain a much better understanding of your app's logic. 
+Chances are the app you're working on is a Phoenix app. If so, following the routes is an excellent way to gain a better understanding of the app. Likewise, if your application involves GraphQL, go to the GraphiQL page to look at the schemas, queries, etc.
 
-graphiql
 
-# 6. Document
+# 5. Document
 
-# 7. Make decisions, just do, ultimatum
+
+Whenever you have to ask questions for clarification around the codebase or the business logic, remember that other people who might join the company in the future will likely have similar questions. Finding a good way to document the answers to your questions is therefore a great way to contribute to the team. Maybe your team already has a place where things are documented, and where you can add information. Maybe you can create a document. Another great way for documenting is adding moduledocs to modules the purpose of which is not entirely obvious. I personally also a big fan of dialyzer and find that adding typespecs is also a great piece of documentation (if they are correct that is).
+
+
+# 6. Don't wait for others to make decisions for you
+
+
+Not all things are perfectly clear and straightforward in your day-to-day life as a developer. Features can be implemented one way or another, you might not be sure which function to use in a specific case and sometimes the tickets you're working on are not entirely clear. Don't let situations like this become blockers for you though: of course it is good to ask your team about preferences and for clarification. But don't hesitate to move forward if you don't get a timely response and don't expect others to make all decisions for you. Instead of asking "we have 2 options, which one should I take?" and then waiting for a response, you could for example say: "We have two options. Option A looks better to me for this or that reason. I will go with option A, unless I hear otherwise". Another option is to start a draft PR and ask a teammate for confirmation that you're on the right track before you go to deep down the rabbit hole.
+
 
 # 8. Grooming: ready to be worked on? (by somebody who did not write it)
 
