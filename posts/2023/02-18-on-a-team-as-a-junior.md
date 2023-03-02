@@ -6,7 +6,7 @@ Cornelia Kelinske
 
 ==description==
 If you know me or have been reading previous blog posts, you know that the past six months have been quite a wild ride for me: job hunt, first job,
-no job and finally the second job. While there are a lot of things that I was able to learn during job number 1, this second job brings along its own set of challenges as I'm experiencing for the first time what it is like to work in an unfamiliar codebase. Luckily I was able to ask some very helpful and knowledgeable folks - big shout-out to everyone in the Groxio Elixir Chatt - for their advice. Here is what they suggested.
+no job and finally the second job. While there are a lot of things that I was able to learn during job number 1, this second job brings along its own set of challenges as I'm experiencing for the first time what it is like to work in an unfamiliar codebase. Luckily I was able to ask some very helpful and knowledgeable folks - big shout-out to everyone in the Groxio Elixir Chatt - for their advice. This post sums up their suggestions in 7 little nuggets of wisdom.
 
 ==tags==
 career, job, junior, dev life
@@ -62,7 +62,9 @@ Whenever you have to ask questions for clarification around the codebase or the 
 Not all things are perfectly clear and straightforward in your day-to-day life as a developer. Features can be implemented one way or another, you might not be sure which function to use in a specific case and sometimes the tickets you're working on are not entirely clear. Don't let situations like this become blockers for you though: of course it is good to ask your team about preferences and for clarification. But don't hesitate to move forward if you don't get a timely response and don't expect others to make all decisions for you. Instead of asking "we have 2 options, which one should I take?" and then waiting for a response, you could for example say: "We have two options. Option A looks better to me for this or that reason. I will go with option A, unless I hear otherwise". Another option is to start a draft PR and ask a teammate for confirmation that you're on the right track before you go to deep down the rabbit hole.
 
 
-# 8. Grooming: ready to be worked on? (by somebody who did not write it)
+# 7. Ask "is this ticket ready to be worked on?" when grooming tickets
 
-1. knowing when 
-Especially during the ticket grooming sessions, where I'm not sure which questions I need to ask to gain clarity. Often, tickets will make sense to me on the surface level, but once I start working on something, all the deeper questions arise. 
+
+One of the things that I find challenging is asking the right questions and identifying potential problems with a ticket during grooming sessions. Often, I find that a ticket looks pretty clear to me during the session, but once I start working on it, all the questions arise. There have been multiple occasions where a 5 line ticket has turned into a ticket multiple times that size, once I started asking questions. In those cases I feel a bit silly for not having asked these questions earlier, and I also wonder why nobody else asked. I hope that this is something that I will get better at with time and experience, but in the meantime, I will try to ask myself - or maybe aloud - "is this ticket ready to be worked on?" when a ticket is about to be accepted. Asking this question is another great piece of advice. By asking it, I'm automatically forced to think about how I would implement it. But the question actually goes further and means: would somebody who isn't present in the grooming session be able to start working on it? I used this tip in the last session and it was the best grooming session I've had so far. 
+
+
