@@ -39,7 +39,7 @@ You might even find the solution on your own. And if not, you will at least have
 # 3. Find a mentor
 
 
-TThis is another solid piece of advice. I can't express how grateful I am for all the people who have mentored me in various ways.
+This is another solid piece of advice. I can't express how grateful I am for all the people who have mentored me in various ways.
 
 If you are new to Elixir or programming and are still a bit unsure about the whole thing and maybe not confident to reach out to anyone, let me tell you: the Elixir community is amazing. Almost everybody I have met on my coding journey has been helpful and welcoming. On this note, feel free to [contact me](https://connie.codes/contact) if there is anything I can help you with.
 
