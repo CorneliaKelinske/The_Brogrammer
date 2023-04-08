@@ -9,7 +9,7 @@ If you know me or have been reading previous blog posts, you know that the past 
 no job and, finally, the second job. While there are a lot of things that I was able to learn during job number 1, this second job brings along its own challenges as I'm experiencing for the first time what it is like to work in an unfamiliar codebase. Luckily I was able to ask some extremely helpful and knowledgeable folks - big shout-out to everyone in the Groxio Elixir Chatt - for their advice. This post sums up their suggestions in 7 little nuggets of wisdom.
 
 ==tags==
-career, job, junior, dev life
+career, job, junior, dev_life
 
 
 ==body==

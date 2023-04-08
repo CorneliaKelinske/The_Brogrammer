@@ -8,7 +8,7 @@ Cornelia Kelinske
 It's been about two months since I started my first job as an Elixir developer. Here are some things I have learned and am still learning. They are not code.
 
 ==tags==
-career, job, junior, dev life
+career, job, junior, dev_life
 
 
 ==body==

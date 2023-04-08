@@ -33,7 +33,9 @@ defmodule TheBrogrammerWeb.PostController do
         render(conn, "show.html", post: post, page_title: post.title)
 
       _ ->
-        render(conn, ErrorView, "404.html")
+        conn
+        |> put_view(ErrorView)
+        |> render("404.html")
     end
   end
 end

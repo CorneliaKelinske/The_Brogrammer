@@ -10,9 +10,9 @@
   <div class="wrapper">
     <body>
       <main role="main" class="section">
-        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-        <p class="alert notification is-success is-light" role="alert"><%= get_flash(@conn, :success) %></p>
+        <p class="alert alert-info" role="alert"><%= Phoenix.Flash.get(@flash, :info) %></p>
+        <p class="alert alert-danger" role="alert"><%= Phoenix.Flash.get(@flash, :error) %></p>
+        <p class="alert notification is-success is-light" role="alert"><%= Phoenix.Flash.get(@flash, :success) %></p>
         <section class="container">
           <%= @inner_content %>
         </section>
