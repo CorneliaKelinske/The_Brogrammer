@@ -59,27 +59,27 @@ defmodule TheBrogrammer.MixProject do
       {:phoenix_html, "~> 3.0"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
       {:phoenix_view, "~> 2.0"},
-      {:phoenix_live_view, "~> 0.18.3"},
+      {:phoenix_live_view, "~> 0.20"},
       {:floki, ">= 0.30.0", only: :test},
-      {:phoenix_live_dashboard, "~> 0.7.2"},
+      {:phoenix_live_dashboard, "~> 0.8"},
       {:esbuild, "~> 0.3", runtime: Mix.env() == :dev},
       {:swoosh, "~> 1.3"},
-      {:telemetry_metrics, "~> 0.6"},
+      {:telemetry_metrics, "~> 1.0"},
       {:telemetry_poller, "~> 1.0"},
       {:gettext, "~> 0.18"},
       {:jason, "~> 1.2"},
       {:plug_cowboy, "~> 2.5"},
       {:dart_sass, "~> 0.1", runtime: Mix.env() == :dev},
-      {:bulma, "0.9.3"},
+      {:bulma, "0.9.4"},
       {:hackney, "~> 1.17"},
       {:postex, "~> 0.1.6"},
-      {:ex_robo_cop, "~> 0.1.3"},
+      {:ex_robo_cop, git: "https://github.com/CorneliaKelinske/ex_robo_cop"},
       # Tooling
       {:excoveralls, "~> 0.10", only: :test},
       {:credo, "~> 1.5", only: :test, runtime: false},
       {:dialyxir, "~> 1.0", only: :test, runtime: false},
-      {:ex_check, "~> 0.14.0", only: :test, runtime: false},
-      {:doctor, "~> 0.18.0", only: :test}
+      {:ex_check, "~> 0.16.0", only: :test, runtime: false},
+      {:doctor, "~> 0.21.0", only: :test}
     ]
   end
 
