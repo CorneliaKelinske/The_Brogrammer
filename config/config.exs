@@ -34,7 +34,7 @@ config :phoenix, :json_library, Jason
 
 # Config dart_sass which is used for Bulma
 config :dart_sass,
-  version: "1.36.0",
+  version: "1.58.0",
   default: [
     args: ~w(--load-path=../deps/bulma css:../priv/static/assets),
     cd: Path.expand("../assets", __DIR__)

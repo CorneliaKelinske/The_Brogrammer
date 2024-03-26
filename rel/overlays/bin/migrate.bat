@@ -1,1 +1,0 @@
-call "%~dp0\the_brogrammer" eval TheBrogrammer.Release.migrate
