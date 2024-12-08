@@ -94,6 +94,7 @@ defmodule TheBrogrammerWeb do
 
       # Import basic rendering functionality (render, render_layout, etc)
       import Phoenix.View
+      import Phoenix.Component
 
       import TheBrogrammerWeb.ErrorHelpers
       import TheBrogrammerWeb.Gettext
