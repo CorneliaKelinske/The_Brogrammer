@@ -2,15 +2,15 @@
   <div class="hero-body">
     <article class="message">
       <div class="message-header">
-        <%= @post.title %>
+        {@post.title}
       </div>
 
       <div class="message-body">
         <div class="block">
-          <div class="blog-date"><%= @post.date %></div>
-          <div class="blog-author">Written by <%= @post.author %></div>
+          <div class="blog-date">{@post.date}</div>
+          <div class="blog-author">Written by {@post.author}</div>
         </div>
-        <%= raw(@post.body) %>
+        {raw(@post.body)}
       </div>
     </article>
   </div>

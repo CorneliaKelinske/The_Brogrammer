@@ -10,16 +10,16 @@
   <div class="wrapper">
     <body>
       <main role="main" class="section">
-        <p class="alert alert-info" role="alert"><%= Phoenix.Flash.get(@flash, :info) %></p>
-        <p class="alert alert-danger" role="alert"><%= Phoenix.Flash.get(@flash, :error) %></p>
-        <p class="alert notification is-success is-light" role="alert"><%= Phoenix.Flash.get(@flash, :success) %></p>
+        <p class="alert alert-info" role="alert">{Phoenix.Flash.get(@flash, :info)}</p>
+        <p class="alert alert-danger" role="alert">{Phoenix.Flash.get(@flash, :error)}</p>
+        <p class="alert notification is-success is-light" role="alert">{Phoenix.Flash.get(@flash, :success)}</p>
         <section class="container">
-          <%= @inner_content %>
+          {@inner_content}
         </section>
       </main>
 
       <section>
-        <%= render("footer.html", conn: @conn) %>
+        {render("footer.html", conn: @conn)}
       </section>
     </body>
   </div>

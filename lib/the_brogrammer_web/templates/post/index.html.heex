@@ -1,22 +1,22 @@
-<h1 class="title"><%= @page_title %></h1>
-<%= paginate(@conn, @page) %>
+<h1 class="title">{@page_title}</h1>
+{paginate(@conn, @page)}
 
 <ul>
   <%= for post <- @posts do %>
     <li>
       <article class="message">
         <div class="message-header">
-          <p><%= link(post.title, to: Routes.post_path(@conn, :show, post), class: "blog-link") %></p>
+          <p>{link(post.title, to: Routes.post_path(@conn, :show, post), class: "blog-link")}</p>
         </div>
 
         <div class="message-body">
           <div class="blog-date">
-            <%= post.date %>
+            {post.date}
           </div>
-          <p><%= post.description %> &nbsp; <%= link("more", to: Routes.post_path(@conn, :show, post.id)) %> <br /></p>
+          <p>{post.description} &nbsp; {link("more", to: Routes.post_path(@conn, :show, post.id))} <br /></p>
           <p>
             <%= for tag <- post.tags do %>
-              <span class="tag is-dark">&nbsp;<%= link(tag, to: Routes.tag_path(@conn, :show, tag)) %></span>
+              <span class="tag is-dark">&nbsp;{link(tag, to: Routes.tag_path(@conn, :show, tag))}</span>
             <% end %>
           </p>
         </div>
