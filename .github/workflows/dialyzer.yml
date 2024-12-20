@@ -16,8 +16,8 @@ jobs:
         env:
           POSTGRES_PASSWORD: postgres
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
+      - uses: actions/checkout@v3
+      - uses: actions/cache@v3
         with:
           path: |
             deps
@@ -28,7 +28,7 @@ jobs:
             ${{ runner.os }}-dialyzer-
       - uses: erlef/setup-beam@v1
         with:
-          otp-version: 24.2
-          elixir-version: 1.13.3
+          otp-version: 27.2
+          elixir-version: 1.18.0
       - run: mix deps.get
       - run: mix dialyzer
