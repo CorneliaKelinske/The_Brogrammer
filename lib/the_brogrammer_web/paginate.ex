@@ -1,6 +1,6 @@
 defmodule TheBrogrammerWeb.Paginate do
   @moduledoc "Builds the pagination HTML for blog posts"
-  use Phoenix.HTML
+  use PhoenixHTMLHelpers
 
   alias TheBrogrammer.Blog
   alias TheBrogrammerWeb.Router.Helpers, as: Routes
